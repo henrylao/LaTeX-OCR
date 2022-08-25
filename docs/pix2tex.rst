@@ -106,18 +106,7 @@ pix2tex.dataset.scraping module
 pix2tex.models package
 ----------------------
 
-pix2tex.models.hybrid module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: pix2tex.models.hybrid
-   :members:
-   :no-undoc-members:
-   :show-inheritance:
-
-pix2tex.models.vit module
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: pix2tex.models.vit
+.. automodule:: pix2tex.models
    :members:
    :no-undoc-members:
    :show-inheritance:
