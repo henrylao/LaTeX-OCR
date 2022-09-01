@@ -109,7 +109,7 @@ def setup_desktop(
 Version=1.0
 Name=pix2tex
 Comment=LaTeX math recognition using machine learning
-Exec={interpreter_path} {gui_path}
+Exec={interpreter_path} {gui_path} --gnome
 Icon={icon_path}
 Terminal=false
 Type=Application

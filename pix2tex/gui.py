@@ -106,7 +106,7 @@ class App(QMainWindow):
     @pyqtSlot()
     def onClick(self):
         self.close()
-        if self.args.gnome:
+        if self.args.gnome == True:
             self.snip_using_gnome_screenshot()
         else:
             self.snipWidget.snip()
