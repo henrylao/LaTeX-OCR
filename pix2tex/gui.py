@@ -17,6 +17,8 @@ from screeninfo import get_monitors
 from pix2tex import cli
 from pix2tex.utils import in_model_path
 
+import qtvscodestyle as qtvsc
+
 QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
@@ -305,10 +307,12 @@ def main():
     parser.add_argument('-m', '--checkpoint', type=str, default='checkpoints/weights.pth', help='path to weights file')
     parser.add_argument('--no-cuda', action='store_true', help='Compute on CPU')
     parser.add_argument('--no-resize', action='store_true', help='Resize the image beforehand')
-    parser.add_argument('--gnome', action='store_true', help='Use gnome-screenshot to capture screenshot')
+    parser.add_argument('--gnome', action='store_false', help='Use gnome-screenshot to capture screenshot')
     arguments = parser.parse_args()
     with in_model_path():
         app = QApplication(sys.argv)
+        stylesheet = qtvsc.load_stylesheet(qtvsc.Theme.MONOKAI)
+        app.setStyleSheet(stylesheet)
         ex = App(arguments)
         sys.exit(app.exec_())
 
